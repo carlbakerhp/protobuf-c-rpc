@@ -29,6 +29,14 @@
 #ifndef __PROTOBUF_C_RPC_H_
 #define __PROTOBUF_C_RPC_H_
 
+#if defined(__cplusplus) && !defined(PROTOBUF_C__BEGIN_DECLS)
+# define PROTOBUF_C__BEGIN_DECLS	extern "C" {
+# define PROTOBUF_C__END_DECLS		}
+#else
+# define PROTOBUF_C__BEGIN_DECLS
+# define PROTOBUF_C__END_DECLS
+#endif
+
 #include <protobuf-c/protobuf-c.h>
 #include <protobuf-c-rpc/protobuf-c-rpc-dispatch.h>
 #include <protobuf-c-rpc/protobuf-c-rpc-data-buffer.h>
